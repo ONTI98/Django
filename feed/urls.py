@@ -4,6 +4,6 @@ from .views import HomeView
 app_name='feed'
 
 urlpatterns=[
-    path(' ',HomeView.as_view(),name='index'),
+    path('',HomeView.as_view(),name='index'),
     
-]
+]  
