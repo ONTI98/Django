@@ -17,6 +17,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+MEDIA_URL='/media/'
+
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
 # Application definition
 
@@ -27,7 +30,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'feed'
+    'feed',
+    'sorl.thumbnail'
 ]
 
 MIDDLEWARE = [
