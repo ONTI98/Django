@@ -27,7 +27,7 @@ class AddPostView(FormView):
 
     def dispatch(self,request,*args,**kwargs):
         self.request=request
-        return super().dispatch(*args,**kwargs)
+        return super().dispatch(request,*args,**kwargs)
     
     def form_valid(self,form):
         #create a new post
