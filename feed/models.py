@@ -1,11 +1,11 @@
 from django.db import models
 from sorl.thumbnail import ImageField
+
+
 # Create your models here.
 class Post(models.Model):
-    text=models.CharField(max_length=140,null=False,blank=False)
-    image=models.ImageField()
+    text = models.CharField(max_length=140, null=False, blank=False)
+    image = models.ImageField()
 
     def __str__(self):
         return self.text
-
-   
