@@ -8,5 +8,5 @@ app_name = "feed"
 urlpatterns = [
     path("", HomeView.as_view(), name="index"),
     path("post/<int:pk>", PostDetailView.as_view(), name="post_details"),
-    path("post/",AddPostView.as_view(),name="post"),
+    path("post/", AddPostView.as_view(), name="post"),
 ]

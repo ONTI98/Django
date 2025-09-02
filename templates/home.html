@@ -3,15 +3,12 @@
 
 {%block head%}
 
-<title>Home Page</title>
+<title>ONTI Studio Supplies</title>
 
 {%endblock%}
 
 
 {%block body%}
-<div>
-    <a href=" {% url 'feed:post' %}"> Add a new post</a>
-</div>
 
     {% for post in posts %}
     <br>
@@ -26,6 +23,8 @@
          
 
         <hr>
-        </a>     
+        </a>
+        
+        
     {% endfor %}
 {%endblock%}
