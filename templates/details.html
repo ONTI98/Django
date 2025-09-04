@@ -5,6 +5,18 @@
 {% endblock %}
 
 {% block body%}
-<h2 style=" padding:15px">{{post.text}}</h2>
-<img src="{{post.image.url}}" >
+<div class="container overflow-hidden text-center">
+    <div class="row justify-content-center">
+        <div class="col p-5 ">
+            <div class="card border-0" style="width: 100%;height:auto;margin:auto">
+                <img src="{{post.image.url}}" class="card-img-top" >
+                    <div class="card-body">
+                        <h5 class="card-title fw-normal text-lg-start">{{post.text}}</h5>
+                            <p class="card-text text-lg-start">Product description in here</p>
+                        <a href="#" class="btn btn-primary d-flex justify-content-center col-lg-2">Add to cart</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
