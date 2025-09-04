@@ -21,6 +21,12 @@
                             </a>
                         </div>
                     </div>
+                    {% empty%}
+                        <div class="text-center">
+                            <h1>Post new product</h1>
+                            <a href="{% url 'feed:post' %}" class="btn btn-primary">Add new post</a>
+                        </div>
+
                 {% endfor %}
             </div>
         </div>
