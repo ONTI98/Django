@@ -1,20 +1,17 @@
-{%extends 'base.html'%}
-
-
-
-{% block head %}
-<title>   Upload a new post </title>
-{% endblock %}
-
-{%block body%}
-<form method="POST" action="" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <div>
-        <button type="submit" action="" >
-            submit form
-        </button>
+{%extends 'base.html'%} {% block head %}
+<title>Upload a new post</title>
+{% endblock %} {%block body%}
+<div class="container m-5">
+    <div class="row justify-content-center">
+        <div class="col d-flex justify-content-center" >
+            <form method="POST" action="" enctype="multipart/form-data">
+              {% csrf_token %} {{ form.as_p }}
+              <div>
+                <button type="submit" class="btn btn-primary " action="">submit form</button>
+              </div>
+            </form>
+        </div>
     </div>
-</form>
+</div>
 
 {%endblock%}
