@@ -1,30 +1,27 @@
-{% extends "base.html" %}
-{% load thumbnail%}
-
-{%block head%}
+{% extends "base.html" %} {% load thumbnail%} {%block head%}
 
 <title>ONTI Studio Supplies</title>
 
-{%endblock%}
+{%endblock%} 
 
-
-{%block body%}
-
-    {% for post in posts %}
-    <br>
-        <a href="{% url 'feed:post_details' post.id %}" >
-            <h2>
-            {{post.text}}
-             </h2>
-
-            {% thumbnail post.image "200x200" crop="center" as im %}
-                <img src="{{im.url}}" width="{{im.width}}" height="{{im.height}}">
-            {% endthumbnail %}<br>
-         
-
-        <hr>
-        </a>
-        
-        
-    {% endfor %}
+{%block body%} 
+    <div class="container overflow-hidden text-center pt-5">
+        <div class="row row-cols-lg-6 row-cols-1 justify-content-center g-lg-5 g-md-3">
+            {% for post in posts %}
+            <div class="card border-0 me-4 p-2" style="width: 18rem">
+                <a href="{% url 'feed:post_details' post.id %}">
+                    {% thumbnail post.image "200x200" crop="center" as im %}
+                        <img src="{{ im.url }}" class="card-img-top" alt="..." />
+                    {% endthumbnail %}
+                </a>
+                    <div class="card-body">
+                        <div class="card-title pt-auto fw-medium pb-2 ">{{post.text}}</div>
+                            <a href="{% url 'feed:post_details' post.id %} " class="btn btn-primary">
+                                Product details
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
 {%endblock%}
